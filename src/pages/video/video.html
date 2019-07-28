@@ -1,0 +1,32 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Video Status</ion-title>
+		<ion-buttons start>
+			<button ion-button icon-only>
+				<ion-badge item-end>{{videos.length}}</ion-badge>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<video controls id="myvideo">
+		<source src="{{videosUrl}}">
+	</video>
+</ion-content>
+<ion-footer>
+	<ion-row>
+		<ion-col text-center>
+			<button [disabled]="index === 0" ion-button (click)="prevVideo()">Previous</button>
+		</ion-col>
+		<ion-col text-center>
+			<button ion-button (click)="download()">
+				<ion-icon name='download'></ion-icon>
+				Download
+			</button>
+		</ion-col>
+		<ion-col text-center>
+			<button [disabled]="index === videos.length - 1" ion-button (click)="nextVideo()">Next</button>
+		</ion-col>
+	</ion-row>
+</ion-footer>
