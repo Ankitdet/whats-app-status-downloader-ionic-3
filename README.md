@@ -2,6 +2,9 @@
 
 Whats app Photo and Video status downloader application for ionic 3
 
+[Download application from Android Store](https://play.google.com/store/apps/details?id=io.ubiq.wastatusdownloader)
+
+
 ## Getting Started
 
 Clone the project or download the zip file, Inside the root folder just run 

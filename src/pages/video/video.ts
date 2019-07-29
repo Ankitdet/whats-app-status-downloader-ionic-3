@@ -52,9 +52,7 @@ export class VideoPage {
 	}
 
 	download() {
-		console.log(this.videos[this.index]);
 		var filename = this.videos[this.index].split(/[\\\/]/).pop();		
-		console.log(filename);
 		const path = this.videos[this.index].substring(0, this.videos[this.index].lastIndexOf("/"));
 		this.file.copyFile(path, filename, this.file.externalRootDirectory, filename)
 		.then(res => {
